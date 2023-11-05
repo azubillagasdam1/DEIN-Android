@@ -1,0 +1,17 @@
+﻿<Application x:Class="AplicacionAutobuses.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AplicacionAutobuses"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+  
+            <!-- Estilo de fuente general -->
+            <Style TargetType="Control">
+            <Setter Property="FontFamily" Value="Impact"/>
+                <Setter Property="FontSize" Value="30"/>
+          
+            </Style>
+        
+
+    </Application.Resources>
+</Application>

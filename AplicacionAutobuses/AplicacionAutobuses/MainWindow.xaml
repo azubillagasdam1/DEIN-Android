@@ -1,0 +1,72 @@
+﻿<Window x:Class="AplicacionAutobuses.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionAutobuses"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <!-- Definir filas y columnas en el Grid principal -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Fila 0, altura automática para el primer Grid -->
+            <RowDefinition Height="*"/>
+            <!-- Fila 1, altura que ocupa todo el espacio restante -->
+        </Grid.RowDefinitions>
+
+        <!-- Primer Grid en la fila 0 -->
+        <Grid Background="#DBDBDB" Height="200">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <!-- Columna 0, tamaño automático para la imagen y el texto -->
+                <ColumnDefinition Width="*"/>
+                <!-- Columna 1, tamaño que ocupa todo el espacio restante para las imágenes -->
+            </Grid.ColumnDefinitions>
+
+            <!-- Imagen a la izquierda -->
+            <Image Width="200" Height="150" Source="/bin/Debug/iconobuses.png"/>
+            <!-- Texto a la izquierda -->
+            <TextBlock Grid.Column="1" Text="Tu Villavesa" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="80" Foreground="Black" FontFamily=""/>
+
+            <!-- Imagen a la derecha -->
+            <Image Grid.Column="1" Width="150" Height="150" Source="/bin/Debug/info.png" HorizontalAlignment="Right" Margin="0,0,200,0"/>
+            <!-- Otra imagen a la derecha -->
+            <Image Grid.Column="1" Width="150" Height="150" Source="/bin/Debug/menu.png" HorizontalAlignment="Right"/>
+        </Grid>
+
+        <!-- Segundo Grid en la fila 1 -->
+        <Grid Grid.Row="1" Background="#AEAEAE">
+            <!-- Cuadrado rojo en la parte superior central -->
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Rectangle Width="1800" Height="200" Fill="Red" Stroke="White" StrokeThickness="5"/>
+                <TextBlock Text="WWW.infotuc.es" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White"/>
+            </Grid>
+
+            <!-- Contenedor de los botones -->
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <!-- Primer botón verde oscuro con borde blanco, tamaño 400x400 y separación de 200px -->
+                <Button Width="500" Height="500" Background="#43C868" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0">
+                    <StackPanel>
+                        <Image Width="250" Height="250" Source="/bin/Debug/autobus.png" />
+                        <TextBlock Text="PARADAS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
+                    </StackPanel>
+                </Button>
+                <!-- Segundo botón verde claro con borde blanco, tamaño 400x400 y separación de 200px -->
+                <Button Width="500" Height="500" Background="#7EC843" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0">
+                    <StackPanel>
+                        <Image Width="250" Height="250" Source="/bin/Debug/mapa.png" />
+                        <TextBlock Text="MAPA" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
+                    </StackPanel>
+                </Button>
+                <!-- Tercer botón amarillo con borde blanco, tamaño 400x400 -->
+                <Button Width="500" Height="500" Background="#BDC843" BorderBrush="White" BorderThickness="10" Margin="0,200,0,0">
+                    <StackPanel>
+                        <Image Width="250" Height="250" Source="/bin/Debug/estrella.png"/>
+                        <TextBlock Text="FAVORITOS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

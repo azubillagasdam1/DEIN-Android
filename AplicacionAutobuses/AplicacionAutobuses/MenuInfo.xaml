@@ -1,0 +1,53 @@
+﻿<Window x:Class="AplicacionAutobuses.MenuInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionAutobuses"
+        mc:Ignorable="d"
+        Title="MenuInfo" Height="1080" Width="1920">
+    <Grid Background="#F3B4B4">
+        <!-- Sección superior con los botones Hamburgesa a la izquierda e info a la derecha -->
+        <Grid Height="200" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!-- Botón de Hamburgesa a la izquierda -->
+            <Button Width="150" Height="150" Margin="50,20,0,0" Background="Transparent" BorderBrush="Transparent">
+                <Image Width="150" Height="150" Source="/bin/Debug/hamburgesa.png"/>
+            </Button>
+            <!-- Texto "INFORMACIÓN" en el centro -->
+            <TextBlock Grid.Column="1" Text="INFORMACIÓN" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150" Foreground="White" FontFamily="Arial" Margin="0,20,0,0"/>
+            <!-- Botón de info a la derecha -->
+            <Button Grid.Column="2" Width="150" Height="150" Margin="0,0,50,0" Background="Transparent" BorderBrush="Transparent">
+                <Image Width="150" Height="150" Source="/bin/Debug/info.png"/>
+            </Button>
+        </Grid>
+
+        <!-- Sección central con los botones -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,200,0,200">
+            <!-- Primer botón verde oscuro -->
+            <Button Width="500" Height="500" Background="#AA914F" BorderBrush="White" BorderThickness="10" Margin="0,0,200,0">
+                <StackPanel>
+                    <Image Width="250" Height="250" Source="/bin/Debug/lineas.png" />
+                    <TextBlock Text="PARADAS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
+                </StackPanel>
+            </Button>
+            <!-- Segundo botón verde claro -->
+            <Button Width="500" Height="500" Background="#C84B43" BorderBrush="White" BorderThickness="10">
+                <StackPanel>
+                    <Image Width="250" Height="250" Source="/bin/Debug/incidencia.png" />
+                    <TextBlock Text="MAPA" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- Sección inferior con el grid www.infotuc.com -->
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
+            <Rectangle Width="1800" Height="200" Fill="Red" Stroke="White" StrokeThickness="5"/>
+            <TextBlock Text="WWW.infotuc.es" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Window>
