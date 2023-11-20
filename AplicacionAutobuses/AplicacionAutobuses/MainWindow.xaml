@@ -25,14 +25,24 @@
             </Grid.ColumnDefinitions>
 
             <!-- Imagen a la izquierda -->
-            <Image Width="200" Height="150" Source="/bin/Debug/iconobuses.png"/>
+            <Button Width="200" Height="150" BorderBrush="Transparent">
+                <Image Source="/bin/Debug/iconobuses.png"/>
+            </Button>
+
             <!-- Texto a la izquierda -->
-            <TextBlock Grid.Column="1" Text="Tu Villavesa" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="80" Foreground="Black" FontFamily=""/>
+            <TextBlock Grid.Column="1" Text="Tu Villavesa" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="80" Foreground="Black" />
 
             <!-- Imagen a la derecha -->
-            <Image Grid.Column="1" Width="150" Height="150" Source="/bin/Debug/info.png" HorizontalAlignment="Right" Margin="0,0,200,0"/>
+
+            <Button Grid.Column="1" Width="150" Height="150" HorizontalAlignment="Right" Margin="0,0,200,0" BorderBrush="Transparent" Click="botonInfoClick">
+                <Image Source="/bin/Debug/info.png"/>
+            </Button>
+
             <!-- Otra imagen a la derecha -->
-            <Image Grid.Column="1" Width="150" Height="150" Source="/bin/Debug/menu.png" HorizontalAlignment="Right"/>
+            <Button Grid.Column="1" Width="150" Height="150" HorizontalAlignment="Right" BorderBrush="Transparent">
+                <Image Source="/bin/Debug/menu.png"/>
+            </Button>
+
         </Grid>
 
         <!-- Segundo Grid en la fila 1 -->
@@ -40,27 +50,33 @@
             <!-- Cuadrado rojo en la parte superior central -->
             <Grid HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Rectangle Width="1800" Height="200" Fill="Red" Stroke="White" StrokeThickness="5"/>
-                <TextBlock Text="WWW.infotuc.es" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold">
+        <Hyperlink NavigateUri="http://www.infotuc.es" RequestNavigate="Hyperlink_RequestNavigate" Foreground="White" TextDecorations="None">
+            <Run Text="www.infotuc.es"/>
+        </Hyperlink>
+                </TextBlock>
             </Grid>
+
+
 
             <!-- Contenedor de los botones -->
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
                 <!-- Primer botón verde oscuro con borde blanco, tamaño 400x400 y separación de 200px -->
-                <Button Width="500" Height="500" Background="#43C868" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0">
+                <Button Width="450" Height="450" Background="#43C868" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0" Click="Button_Click">
                     <StackPanel>
                         <Image Width="250" Height="250" Source="/bin/Debug/autobus.png" />
                         <TextBlock Text="PARADAS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
                     </StackPanel>
                 </Button>
                 <!-- Segundo botón verde claro con borde blanco, tamaño 400x400 y separación de 200px -->
-                <Button Width="500" Height="500" Background="#7EC843" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0">
+                <Button Width="450" Height="450" Background="#7EC843" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0" Click="Button_Click_1">
                     <StackPanel>
                         <Image Width="250" Height="250" Source="/bin/Debug/mapa.png" />
                         <TextBlock Text="MAPA" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
                     </StackPanel>
                 </Button>
                 <!-- Tercer botón amarillo con borde blanco, tamaño 400x400 -->
-                <Button Width="500" Height="500" Background="#BDC843" BorderBrush="White" BorderThickness="10" Margin="0,200,0,0">
+                <Button Width="450" Height="450" Background="#BDC843" BorderBrush="White" BorderThickness="10" Margin="0,200,0,0" Click="Button_Click_2">
                     <StackPanel>
                         <Image Width="250" Height="250" Source="/bin/Debug/estrella.png"/>
                         <TextBlock Text="FAVORITOS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>

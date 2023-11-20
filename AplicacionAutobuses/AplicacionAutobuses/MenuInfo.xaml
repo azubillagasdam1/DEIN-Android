@@ -6,7 +6,24 @@
         xmlns:local="clr-namespace:AplicacionAutobuses"
         mc:Ignorable="d"
         Title="MenuInfo" Height="1080" Width="1920">
+    
+    
+    
+    
+    
+    
+    
     <Grid Background="#F3B4B4">
+       
+
+
+
+
+
+
+
+
+
         <!-- Sección superior con los botones Hamburgesa a la izquierda e info a la derecha -->
         <Grid Height="200" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -14,14 +31,17 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
+            
+
             <!-- Botón de Hamburgesa a la izquierda -->
-            <Button Width="150" Height="150" Margin="50,20,0,0" Background="Transparent" BorderBrush="Transparent">
+            <Button x:Name="BotonHamburguesa" Width="150" Height="150" Margin="50,20,0,0" Background="Transparent" BorderBrush="Transparent" Click="MenuHamburguesaClick">
                 <Image Width="150" Height="150" Source="/bin/Debug/hamburgesa.png"/>
             </Button>
+
             <!-- Texto "INFORMACIÓN" en el centro -->
             <TextBlock Grid.Column="1" Text="INFORMACIÓN" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="150" Foreground="White" FontFamily="Arial" Margin="0,20,0,0"/>
             <!-- Botón de info a la derecha -->
-            <Button Grid.Column="2" Width="150" Height="150" Margin="0,0,50,0" Background="Transparent" BorderBrush="Transparent">
+            <Button Grid.Column="2" Width="150" Height="150" Margin="0,0,50,0" Background="Transparent" BorderBrush="Transparent" Click="Button_Click">
                 <Image Width="150" Height="150" Source="/bin/Debug/info.png"/>
             </Button>
         </Grid>
@@ -29,14 +49,14 @@
         <!-- Sección central con los botones -->
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="0,200,0,200">
             <!-- Primer botón verde oscuro -->
-            <Button Width="500" Height="500" Background="#AA914F" BorderBrush="White" BorderThickness="10" Margin="0,0,200,0">
+            <Button Width="450" Height="450" Background="#AA914F" BorderBrush="White" BorderThickness="10" Margin="0,0,200,0" Click="Button_Click"   MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
                 <StackPanel>
                     <Image Width="250" Height="250" Source="/bin/Debug/lineas.png" />
                     <TextBlock Text="PARADAS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
                 </StackPanel>
             </Button>
             <!-- Segundo botón verde claro -->
-            <Button Width="500" Height="500" Background="#C84B43" BorderBrush="White" BorderThickness="10">
+            <Button Width="450" Height="450" Background="#C84B43" BorderBrush="White" BorderThickness="10" Click="Button_Click_1"  MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
                 <StackPanel>
                     <Image Width="250" Height="250" Source="/bin/Debug/incidencia.png" />
                     <TextBlock Text="MAPA" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
@@ -47,7 +67,58 @@
         <!-- Sección inferior con el grid www.infotuc.com -->
         <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
             <Rectangle Width="1800" Height="200" Fill="Red" Stroke="White" StrokeThickness="5"/>
-            <TextBlock Text="WWW.infotuc.es" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold" Foreground="White"/>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="100" FontWeight="Bold">
+        <Hyperlink NavigateUri="http://www.infotuc.es" RequestNavigate="Hyperlink_RequestNavigate" Foreground="White" TextDecorations="None">
+            <Run Text="www.infotuc.es"/>
+        </Hyperlink>
+            </TextBlock>
         </Grid>
+
+
+
+
+
+
+        <Canvas x:Name="MenuCanvas" Background="White" Width="600" Height="1080" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <!-- Contenido del menú -->
+            <StackPanel Canvas.Left="0" Canvas.Top="0" Background="White">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20">
+                    <StackPanel>
+                        <TextBlock Text="INFO" FontSize="100" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,10"/>
+                    </StackPanel>
+                </Button>
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                    <StackPanel>
+                        <TextBlock Text="INICIO" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                    <StackPanel>
+                        <TextBlock Text="PARADAS" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                    <StackPanel>
+                        <TextBlock Text="MAPA" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                    <StackPanel>
+                        <TextBlock Text="FAVORITOS" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Canvas>
+
+
+
+
     </Grid>
+    
+    
 </Window>

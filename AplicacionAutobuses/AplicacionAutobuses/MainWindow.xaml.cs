@@ -24,5 +24,36 @@ namespace AplicacionAutobuses
         {
             InitializeComponent();
         }
+
+    
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
+
+        private void botonInfoClick(object sender, RoutedEventArgs e)
+        {
+          
+            MenuInfo menuInfo = new MenuInfo();
+            menuInfo.Show();
+          
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
