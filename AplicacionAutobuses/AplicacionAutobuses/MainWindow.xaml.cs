@@ -58,8 +58,8 @@ namespace AplicacionAutobuses
 
         private void IrAFavoritos(object sender, RoutedEventArgs e)
         {
-            //FavoritosWindow favoritosWindow = new FavoritosWindow();
-            //favoritosWindow.Show();
+            MenuFavoritos favoritosWindow = new MenuFavoritos();
+            favoritosWindow.Show();
             this.Close();
         }
 
@@ -80,7 +80,7 @@ namespace AplicacionAutobuses
         private void IrAParadas(object sender, RoutedEventArgs e)
         {
             MenuParadas paradasWindow = new MenuParadas();
-            //paradasWindow.Show();
+            paradasWindow.Show();
             this.Close();
         }
 

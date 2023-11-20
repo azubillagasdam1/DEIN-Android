@@ -71,6 +71,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuFavoritos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MenuParadas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -79,6 +83,9 @@
   <ItemGroup>
     <Compile Include="MenuInfo.xaml.cs">
       <DependentUpon>MenuInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuFavoritos.xaml.cs">
+      <DependentUpon>MenuFavoritos.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuParadas.xaml.cs">
       <DependentUpon>MenuParadas.xaml</DependentUpon>

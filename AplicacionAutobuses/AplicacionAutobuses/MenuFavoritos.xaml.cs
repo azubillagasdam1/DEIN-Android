@@ -17,14 +17,12 @@ namespace AplicacionAutobuses
     /// <summary>
     /// Lógica de interacción para MenuParadas.xaml
     /// </summary>
-    public partial class MenuParadas : Window
+    public partial class MenuFavoritos : Window
     {
-        public MenuParadas()
+        public MenuFavoritos()
         {
             InitializeComponent();
         }
-
-
         private void MenuHamburguesaClick(object sender, RoutedEventArgs e)
         {
             if (MenuCanvas.Visibility == Visibility.Collapsed)
@@ -38,6 +36,7 @@ namespace AplicacionAutobuses
                 BotonHamburguesa.Visibility = Visibility.Visible; // Muestra el botón de la hamburguesa
             }
         }
+
         private void botonInfoClick(object sender, RoutedEventArgs e)
         {
 
