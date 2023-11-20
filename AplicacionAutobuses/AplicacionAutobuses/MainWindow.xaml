@@ -62,7 +62,7 @@
             <!-- Contenedor de los botones -->
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
                 <!-- Primer botón verde oscuro con borde blanco, tamaño 400x400 y separación de 200px -->
-                <Button Width="450" Height="450" Background="#43C868" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0" Click="Button_Click">
+                <Button Width="450" Height="450" Background="#43C868" BorderBrush="White" BorderThickness="10" Margin="0,200,100,0" Click="IrAParadas">
                     <StackPanel>
                         <Image Width="250" Height="250" Source="/bin/Debug/autobus.png" />
                         <TextBlock Text="PARADAS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>

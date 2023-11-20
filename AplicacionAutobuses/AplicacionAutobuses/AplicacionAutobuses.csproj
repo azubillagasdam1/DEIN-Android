@@ -71,10 +71,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MenuParadas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MenuInfo.xaml.cs">
       <DependentUpon>MenuInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuParadas.xaml.cs">
+      <DependentUpon>MenuParadas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -103,7 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="bin\Debug\autobus.png" />
-    <Resource Include="bin\Debug\estrella.png" />
     <Resource Include="bin\Debug\mapa.png" />
   </ItemGroup>
   <ItemGroup>

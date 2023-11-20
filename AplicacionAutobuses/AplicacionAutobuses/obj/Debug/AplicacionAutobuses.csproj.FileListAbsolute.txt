@@ -16,3 +16,5 @@ C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\Ap
 C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuInfo.g.cs
 C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\App.baml
 C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuInfo.baml
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuParadas.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuParadas.baml

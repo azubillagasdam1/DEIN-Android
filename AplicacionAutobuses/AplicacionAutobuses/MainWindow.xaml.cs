@@ -55,5 +55,40 @@ namespace AplicacionAutobuses
         {
 
         }
+
+        private void IrAFavoritos(object sender, RoutedEventArgs e)
+        {
+            //FavoritosWindow favoritosWindow = new FavoritosWindow();
+            //favoritosWindow.Show();
+            this.Close();
+        }
+
+        private void IrAInfo(object sender, RoutedEventArgs e)
+        {
+            MenuInfo infoWindow = new MenuInfo();
+            infoWindow.Show();
+            this.Close();
+        }
+
+        private void IrAInicio(object sender, RoutedEventArgs e)
+        {
+            MainWindow inicioWindow = new MainWindow();
+            inicioWindow.Show();
+            this.Close();
+        }
+
+        private void IrAParadas(object sender, RoutedEventArgs e)
+        {
+            MenuParadas paradasWindow = new MenuParadas();
+            //paradasWindow.Show();
+            this.Close();
+        }
+
+        private void IrAMapa(object sender, RoutedEventArgs e)
+        {
+            // MapaWindow mapaWindow = new MapaWindow();
+            //mapaWindow.Show();
+            this.Close();
+        }
     }
 }

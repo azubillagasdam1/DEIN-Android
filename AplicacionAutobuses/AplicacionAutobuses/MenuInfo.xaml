@@ -82,31 +82,31 @@
         <Canvas x:Name="MenuCanvas" Background="White" Width="600" Height="1080" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Left">
             <!-- Contenido del menú -->
             <StackPanel Canvas.Left="0" Canvas.Top="0" Background="White">
-                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20" Click="IrAInfo">
                     <StackPanel>
-                        <TextBlock Text="INFO" FontSize="100" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="INFO" FontSize="100" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" />
                         <Border BorderBrush="Gray" BorderThickness="0,0,0,10"/>
                     </StackPanel>
                 </Button>
-                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAInicio">
                     <StackPanel>
                         <TextBlock Text="INICIO" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
                     </StackPanel>
                 </Button>
-                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAParadas">
                     <StackPanel>
                         <TextBlock Text="PARADAS" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
                     </StackPanel>
                 </Button>
-                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAMapa">
                     <StackPanel>
                         <TextBlock Text="MAPA" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
                     </StackPanel>
                 </Button>
-                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAFavoritos">
                     <StackPanel>
                         <TextBlock Text="FAVORITOS" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
