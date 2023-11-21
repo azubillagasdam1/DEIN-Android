@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicacionAutobuses"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        mc:Ignorable="d" 
+        Title="MainWindow"  WindowState="Maximized" Height="1080" Width="1920">
     <Grid>
         <!-- Definir filas y columnas en el Grid principal -->
         <Grid.RowDefinitions>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicacionAutobuses"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow"  WindowState="Maximized" Height="1080" Width="1920">
     <Grid>
         <Grid.RowDefinitions>
             <!-- Fila 1 en color blanco -->
@@ -67,10 +67,10 @@
         <Canvas x:Name="MenuCanvas" Background="White" Width="600" Height="1080" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Left">
             <!-- Contenido del menú -->
             <StackPanel Canvas.Left="0" Canvas.Top="0" Background="White">
-                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20" Click="IrAInfo">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAFavoritos">
                     <StackPanel>
-                        <TextBlock Text="INFO" FontSize="100" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                        <Border BorderBrush="Gray" BorderThickness="0,0,0,10"/>
+                        <TextBlock Text="FAVORITOS" FontSize="100" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
                     </StackPanel>
                 </Button>
                 <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAInicio">
@@ -91,10 +91,10 @@
                         <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
                     </StackPanel>
                 </Button>
-                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAFavoritos">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20" Click="IrAInfo">
                     <StackPanel>
-                        <TextBlock Text="FAVORITOS" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                        <TextBlock Text="INFO" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,10"/>
                     </StackPanel>
                 </Button>
             </StackPanel>
