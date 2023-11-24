@@ -1,0 +1,116 @@
+﻿<Window x:Class="AplicacionAutobuses.MenuIncidencias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionAutobuses"
+        mc:Ignorable="d"
+        Title="MenuIncidencias" Height="1080" Width="1920">
+    <Window.Resources>
+        <!-- Estilo para el texto de la cabecera del GroupBox -->
+        <Style x:Key="EstiloCabecera" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextDecorations" Value="Underline"/>
+            <Setter Property="Foreground" Value="Gray"/>
+        </Style>
+    </Window.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+        <Grid Background="#F3B4B4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Fila 0, tamaño automático para la imagen y el texto -->
+                <RowDefinition Height="*"/>
+                <!-- Fila 1, tamaño que ocupa todo el espacio restante para las imágenes -->
+                <RowDefinition Height="*"/>
+                <!-- Fila 2, tamaño que ocupa todo el espacio restante para las imágenes -->
+                <RowDefinition Height="*"/>
+                <!-- Fila 3, tamaño que ocupa todo el espacio restante para las imágenes -->
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Width="200" Height="150" BorderBrush="Transparent" HorizontalAlignment="Left" Background="Transparent">
+                <Image Source="/bin/Debug/info.png"/>
+            </Button>
+
+            <!-- Texto en la fila 0 -->
+            <TextBlock x:Name="TituloTextBlock" Grid.Row="0" Text="INCIDENCIAS" HorizontalAlignment="Left" Margin="400,0,0,0" VerticalAlignment="Center" FontSize="80" Foreground="Gray" FontWeight="Bold"/>
+
+
+            <!-- Imagen en la fila 0 -->
+            <Button Grid.Row="0" Width="150" Height="150" HorizontalAlignment="Right" Margin="0,0,0,0" Background="Transparent" Click="IrAMenuInfo">
+                <Image Source="/bin/Debug/atras.png"/>
+            </Button>
+
+            <!-- NOMBRE -->
+            <GroupBox Grid.Row="1"   Margin="50" HorizontalAlignment="Left" Width="400" Background="LightGray">
+                <GroupBox.Header>
+                    <TextBlock x:Name="NombreHeader" Style="{StaticResource EstiloCabecera}">NOMBRE</TextBlock>
+                </GroupBox.Header>
+
+                <TextBox x:Name="NombreTextBox" Text="*" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Foreground="Gray"/>
+            </GroupBox>
+
+            <!-- APELLIDOS -->
+            <GroupBox Grid.Row="1"   Margin="50" HorizontalAlignment="Center" Width="800" Background="LightGray">
+                <GroupBox.Header>
+                    <TextBlock x:Name="ApellidosHeader" Style="{StaticResource EstiloCabecera}">APELLIDOS</TextBlock>
+                </GroupBox.Header>
+
+                <TextBox x:Name="ApellidosTextBox" Text="*" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Foreground="Gray"/>
+            </GroupBox>
+
+            <!-- DNI -->
+            <GroupBox Grid.Row="1"   Margin="50" HorizontalAlignment="Right" Width="400" Background="LightGray" >
+                <GroupBox.Header>
+                    <TextBlock x:Name="DNIHeader" Style="{StaticResource EstiloCabecera}">DNI</TextBlock>
+                </GroupBox.Header>
+
+                <TextBox x:Name="DNITextBox" Text="*00000000X" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Foreground="Gray" />
+            </GroupBox>
+
+            <!-- CP -->
+            <GroupBox Grid.Row="2"   Margin="50" HorizontalAlignment="Left" Width="400" Background="LightGray" >
+                <GroupBox.Header>
+                    <TextBlock x:Name="CPHeader" Style="{StaticResource EstiloCabecera}">CP</TextBlock>
+                </GroupBox.Header>
+
+                <TextBox x:Name="CPTextBox" Text="*00000" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Foreground="Gray" />
+            </GroupBox>
+
+            <!-- CORREO -->
+            <GroupBox Grid.Row="2"   Margin="50" HorizontalAlignment="Right" Width="1200" Background="LightGray" >
+                <GroupBox.Header>
+                    <TextBlock x:Name="CorreoHeader" Style="{StaticResource EstiloCabecera}">CORREO</TextBlock>
+                </GroupBox.Header>
+
+                <TextBox x:Name="CorreoTextBox" Text="*" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Foreground="Gray" />
+            </GroupBox>
+
+            <!-- TIPO DE INCIDENCIA -->
+            <GroupBox Grid.Row="3" Margin="50" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="500" Height="200" Background="LightGray">
+                <GroupBox.Header>
+                    <TextBlock x:Name="TipoIncidenciaHeader" Style="{StaticResource EstiloCabecera}" FontSize="20">TIPO DE INCIDENCIA</TextBlock>
+                </GroupBox.Header>
+
+                <ComboBox x:Name="TipoIncidenciaComboBox" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="20,10,20,10" FontSize="18" Foreground="Black">
+                    <ComboBoxItem Content="Perdida de Objeto"  IsSelected="True" />
+                    <ComboBoxItem Content="Hurto o Robo" />
+                    <ComboBoxItem Content="Confrontamiento o Incidente" />
+                </ComboBox>
+
+            </GroupBox>
+
+            <!-- BOTÓN ENVIAR -->
+            <Button x:Name="EnviarButton" Grid.Row="3" Width="500" Margin="50,323,1362,77" HorizontalAlignment="Center" Content="Enviar" Background="DarkGray" Foreground="White" FontSize="40" Click="enviar"/>
+
+            <!-- BREVE DESCRIPCIÓN-->
+            <GroupBox Grid.Row="3"   Margin="50" HorizontalAlignment="Right" Width="1000" Height="400" Background="LightGray" >
+                <GroupBox.Header>
+                    <TextBlock x:Name="DescripcionHeader" Style="{StaticResource EstiloCabecera}">BREVE DESCRIPCIÓN</TextBlock>
+                </GroupBox.Header>
+
+                <TextBox x:Name="DescripcionTextBox" Text="" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="30" Foreground="Gray" />
+            </GroupBox>
+        </Grid>
+    </ScrollViewer>
+</Window>

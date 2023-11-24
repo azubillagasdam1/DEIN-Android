@@ -5,17 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicacionAutobuses"
         mc:Ignorable="d"
-        Title="MainWindow"  WindowState="Maximized" Height="1080" Width="1920">
+        Title="MainWindow"   WindowStartupLocation="CenterOwner" Height="1080" Width="1920">
+    
     <Grid>
+        
         <Grid.RowDefinitions>
             <!-- Fila 1 en color blanco -->
             <RowDefinition Height="200"/>
             <!-- Filas amarillas iteradas -->
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="800"/>
+            
             <!-- ... Puedes agregar más filas amarillas según sea necesario -->
         </Grid.RowDefinitions>
 
@@ -39,30 +38,39 @@
                 <TextBlock Text="BUSCAR PARADA" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20" FontSize="90"/>
 
                 <!-- Imagen en el centro -->
-                <Image Source="/bin/Debug/estrellaGris.png" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Image Source="/bin/Debug/chincheta.png" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
                 <!-- Imagen a la derecha -->
                 <Image Source="/bin/Debug/menu.png" Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Right"/>
             </Grid>
         </Grid>
 
-        <!-- Filas amarillas iteradas -->
-        <Grid Grid.Row="1" Background="#D7D7D7">
-            <!-- Contenido de la segunda fila aquí -->
-        </Grid>
 
-        <Grid Grid.Row="2" Background="#D7D7D7">
-            <!-- Contenido de la tercera fila aquí -->
-        </Grid>
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <ItemsControl x:Name="paradasContainer" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button Click="ParadaButtonClick" Margin="0,10,0,10">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="LightGray" Margin="5">
+                                        <!-- Contenido de la parada aquí -->
+                                        <TextBlock Text="{Binding NombreParada}" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="55" TextWrapping="Wrap" TextAlignment="Left" Height="200" Width="600"/>
+                                        <Image Source="/bin/Debug/estrella.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="600,0,0,0" Width="150" Height="150"/>
 
-        <Grid Grid.Row="3" Background="#D7D7D7">
-            <!-- Contenido de la cuarta fila aquí -->
-        </Grid>
-
-        <Grid Grid.Row="4" Background="#D7D7D7">
-            <!-- Contenido de la quinta fila aquí -->
-        </Grid>
-
+                                    </Grid>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
         <!-- ... Puedes agregar más contenido para filas amarillas según sea necesario -->
         <Canvas x:Name="MenuCanvas" Background="White" Width="600" Height="1080" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Left">
             <!-- Contenido del menú -->
@@ -99,6 +107,13 @@
                 </Button>
             </StackPanel>
         </Canvas>
+
+      
+
+
+
+
+
     </Grid>
     
     

@@ -37,6 +37,32 @@ namespace AplicacionAutobuses
             }
         }
 
+
+
+        private void EliminarGrid_Click(object sender, RoutedEventArgs e)
+        {
+            // Obtener el botón que se hizo clic
+            Button btn = (Button)sender;
+
+            // Obtener el Grid padre del botón
+            Grid grid = (Grid)btn.Parent;
+
+            // Eliminar el Grid de su contenedor principal (puede ser un StackPanel, Grid principal, etc.)
+            if (grid != null)
+            {
+                // Obtener el contenedor principal del Grid
+                var container = (Panel)grid.Parent;
+
+                // Eliminar el Grid del contenedor principal
+                if (container != null)
+                {
+                    container.Children.Remove(grid);
+                }
+            }
+        }
+
+
+
         private void botonInfoClick(object sender, RoutedEventArgs e)
         {
 

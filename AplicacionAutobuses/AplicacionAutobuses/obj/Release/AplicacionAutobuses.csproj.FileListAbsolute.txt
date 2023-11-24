@@ -16,3 +16,14 @@ C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\Ap
 C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\AplicacionAutobuses.csproj.CoreCompileInputs.cache
 C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\AplicacionAutobuses.exe
 C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\AplicacionAutobuses.pdb
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\bin\Release\Database2.mdf
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\bin\Release\Database2_log.ldf
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuIncidencias.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuFavoritos.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuMapa.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuParadas.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\AplicacionAutobuses_Content.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuIncidencias.baml
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuFavoritos.baml
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuMapa.baml
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Release\MenuParadas.baml

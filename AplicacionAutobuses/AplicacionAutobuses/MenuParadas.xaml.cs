@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System;
+using System.Collections.ObjectModel;
+using System.Data.SqlClient;
+using System.Windows;
 
 namespace AplicacionAutobuses
 {
@@ -19,9 +23,53 @@ namespace AplicacionAutobuses
     /// </summary>
     public partial class MenuParadas : Window
     {
+        public ObservableCollection<Parada> Paradas { get; set; }
+
         public MenuParadas()
         {
             InitializeComponent();
+
+            // Inicializa la colección de paradas
+            Paradas = new ObservableCollection<Parada>();
+
+            // Asigna la colección de paradas al ItemsControl
+            paradasContainer.ItemsSource = Paradas;
+
+            // Llena la colección de paradas desde la base de datos
+            CargarParadasDesdeBaseDeDatos();
+        }
+
+        private void CargarParadasDesdeBaseDeDatos()
+        {
+            // Connection string para tu base de datos (ajusta según tu configuración)
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database2.mdf;Integrated Security=True";
+
+            // Query para seleccionar las paradas
+            string query = "SELECT Nombre FROM Paradas";
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                // Añade cada parada a la colección
+                                Paradas.Add(new Parada { NombreParada = reader["Nombre"].ToString() });
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar las paradas: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
 
@@ -109,5 +157,18 @@ namespace AplicacionAutobuses
                 }
             }
         }
+        private void ParadaButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button clickedButton && clickedButton.DataContext is Parada parada)
+            {
+                // Aquí puedes realizar acciones adicionales al hacer clic en una parada
+                MessageBox.Show($"Haz clic en la parada: {parada.NombreParada}");
+            }
+        }
     }
+    public class Parada
+    {
+        public string NombreParada { get; set; }
+    }
+
 }

@@ -155,5 +155,12 @@ namespace AplicacionAutobuses
             //mapaWindow.Show();
             this.Close();
         }
+
+        private void IrAIncidencias(object sender, RoutedEventArgs e)
+        {
+            MenuIncidencias menuIncidencias = new MenuIncidencias();
+            menuIncidencias.Show();
+            this.Close();
+        }
     }
 }

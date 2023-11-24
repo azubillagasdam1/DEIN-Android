@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicacionAutobuses"
         mc:Ignorable="d"
-        Title="MainWindow"  WindowState="Maximized" Height="1080" Width="1920">
+        Title="MainWindow" Height="1080" Width="1920" WindowStartupLocation="CenterOwner">
+
     <Grid>
         <Grid.RowDefinitions>
             <!-- Fila 1 en color blanco -->
@@ -34,7 +35,7 @@
             </Button>
 
             <!-- Contenedor blanco a la derecha -->
-            <Grid Grid.Column="1" Background="White" Width="1650" Height="200" Margin="50,0,50,0">
+            <Grid Grid.Column="1" Background="White" Width="1800" Height="200" Margin="50,0,50,0">
                 <!-- Texto "BUSCAR PARADA" a la izquierda -->
                 <TextBlock Text="BUSCAR PARADA" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20" FontSize="90"/>
 
@@ -47,21 +48,39 @@
         </Grid>
 
         <!-- Filas amarillas iteradas -->
-        <Grid Grid.Row="1" Background="Yellow">
-            <!-- Contenido de la segunda fila aquí -->
+        <Grid Background="LightYellow" Margin="5" Grid.Row="1">
+            <!-- Contenido de la parada aquí -->
+            <TextBlock Text="Ctra. Cizur Menor (CIP Donapea)" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="55" TextWrapping="Wrap" TextAlignment="Left" Height="200" Width="600"/>
+            <Image Source="/bin/Debug/estrellaEncendida.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="600,0,0,0" Width="150" Height="150"/>
+            <Button Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Right" Click="EliminarGrid_Click" Background="Transparent">
+                <Image Source="/bin/Debug/X.png" Width="150" Height="150"/>
+            </Button>
+        </Grid>
+        <Grid Background="LightYellow" Margin="5" Grid.Row="2">
+            <!-- Contenido de la parada aquí -->
+            <TextBlock Text="c/Fuente del Hierro (Univ. Navarra)" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="55" TextWrapping="Wrap" TextAlignment="Left" Height="200" Width="600"/>
+            <Image Source="/bin/Debug/estrellaEncendida.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="600,0,0,0" Width="150" Height="150"/>
+            <Button Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Right" Click="EliminarGrid_Click" Background="Transparent">
+                <Image Source="/bin/Debug/X.png" Width="150" Height="150"/>
+            </Button>
+        </Grid>
+        <Grid Background="LightYellow" Margin="5" Grid.Row="3">
+            <!-- Contenido de la parada aquí -->
+            <TextBlock Text="c/ Tajonar, nº 2" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="55" TextWrapping="Wrap" TextAlignment="Left" Height="200" Width="600"/>
+            <Image Source="/bin/Debug/estrellaEncendida.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="600,0,0,0" Width="150" Height="150"/>
+            <Button Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Right" Click="EliminarGrid_Click" Background="Transparent">
+                <Image Source="/bin/Debug/X.png" Width="150" Height="150"/>
+            </Button>
+        </Grid>
+        <Grid Background="LightYellow" Margin="5" Grid.Row="4">
+            <!-- Contenido de la parada aquí -->
+            <TextBlock Text="c/ Tajonar (frente nº 31)" Foreground="Gray" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="55" TextWrapping="Wrap" TextAlignment="Left" Height="200" Width="600"/>
+            <Image Source="/bin/Debug/estrellaEncendida.png" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="600,0,0,0" Width="150" Height="150"/>
+            <Button Width="150" Height="150" VerticalAlignment="Center" HorizontalAlignment="Right" Click="EliminarGrid_Click" Background="Transparent">
+                <Image Source="/bin/Debug/X.png" Width="150" Height="150"/>
+            </Button>
         </Grid>
 
-        <Grid Grid.Row="2" Background="Yellow">
-            <!-- Contenido de la tercera fila aquí -->
-        </Grid>
-
-        <Grid Grid.Row="3" Background="Yellow">
-            <!-- Contenido de la cuarta fila aquí -->
-        </Grid>
-
-        <Grid Grid.Row="4" Background="Yellow">
-            <!-- Contenido de la quinta fila aquí -->
-        </Grid>
 
         <!-- ... Puedes agregar más contenido para filas amarillas según sea necesario -->
         <Canvas x:Name="MenuCanvas" Background="White" Width="600" Height="1080" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Left">

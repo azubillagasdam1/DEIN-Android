@@ -1,0 +1,81 @@
+﻿<Window x:Class="AplicacionAutobuses.MenuMapa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicacionAutobuses"
+        mc:Ignorable="d"
+        Title="MenuMapa" Height="1080" Width="1920">
+    <Grid>
+        <!-- Fila 0: Título y Imágenes -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Título "MAPA" en la parte superior central -->
+        <TextBlock Text="MAPA" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="100" FontWeight="Bold" Margin="0,10"/>
+
+        <!-- Imagen en la esquina superior izquierda -->
+        <Button x:Name="BotonHamburguesa" HorizontalAlignment="Left" Width="150" Height="150" Margin="20,0,0,0" Background="Transparent" BorderBrush="Transparent" Click="MenuHamburguesaClick">
+            <Image Width="150" Height="150" Source="/bin/Debug/hamburgesa.png"/>
+        </Button>
+
+
+
+        <!-- Fila 1: Contenido que ocupa toda la ventana -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"/>
+                <ColumnDefinition Width="58*"/>
+            </Grid.ColumnDefinitions>
+            <!-- Mapa interactivo -->
+            <WebBrowser Name="webBrowser" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2"/>
+
+        </Grid>
+
+
+
+
+        <Canvas x:Name="MenuCanvas" Background="White" Width="600" Height="1080" Visibility="Collapsed" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <!-- Contenido del menú -->
+          
+            
+            <StackPanel Canvas.Left="0" Canvas.Top="0" Background="White">
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAMapa">
+                    <StackPanel>
+                        <TextBlock Text="MAPA" FontSize="100" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAInicio">
+                    <StackPanel>
+                        <TextBlock Text="INICIO" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAParadas">
+                    <StackPanel>
+                        <TextBlock Text="PARADAS" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20"   MouseEnter="ButtonMenu_MouseEnter" MouseLeave="ButtonMenu_MouseLeave" Click="IrAFavoritos">
+                    <StackPanel>
+                        <TextBlock Text="FAVORITOS" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,5"/>
+                    </StackPanel>
+                </Button>
+                <Button Width="600" Height="150" Background="Transparent" BorderBrush="Transparent" Margin="0,0,0,20" Click="IrAInfo">
+                    <StackPanel>
+                        <TextBlock Text="INFO" FontSize="70" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Border BorderBrush="Gray" BorderThickness="0,0,0,10"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Canvas>
+
+
+    </Grid>
+</Window>

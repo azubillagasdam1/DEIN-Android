@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicacionAutobuses"
         mc:Ignorable="d" 
-        Title="MainWindow"  WindowState="Maximized" Height="1080" Width="1920">
+        Title="MainWindow"  WindowStartupLocation="CenterOwner" Height="1080" Width="1920">
     <Grid>
         <!-- Definir filas y columnas en el Grid principal -->
         <Grid.RowDefinitions>

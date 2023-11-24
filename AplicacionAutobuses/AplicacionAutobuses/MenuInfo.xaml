@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AplicacionAutobuses"
         mc:Ignorable="d"
-        Title="MenuInfo"  WindowState="Maximized" Height="1080" Width="1920">
+        Title="MenuInfo"  WindowStartupLocation="CenterOwner" Height="1080" Width="1920">
     
     
     
@@ -56,10 +56,10 @@
                 </StackPanel>
             </Button>
             <!-- Segundo botón verde claro -->
-            <Button Width="450" Height="450" Background="#C84B43" BorderBrush="White" BorderThickness="10" Click="Button_Click_1"  MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
+            <Button Width="450" Height="450" Background="#C84B43" BorderBrush="White" BorderThickness="10" Click="IrAIncidencias"  MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
                 <StackPanel>
                     <Image Width="250" Height="250" Source="/bin/Debug/incidencia.png" />
-                    <TextBlock Text="MAPA" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
+                    <TextBlock Text="INCIDENCIAS" HorizontalAlignment="Center" Foreground="White" FontSize="40" Margin="0,20,0,0"/>
                 </StackPanel>
             </Button>
         </StackPanel>

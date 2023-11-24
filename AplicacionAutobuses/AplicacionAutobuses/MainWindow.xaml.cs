@@ -86,8 +86,8 @@ namespace AplicacionAutobuses
 
         private void IrAMapa(object sender, RoutedEventArgs e)
         {
-            // MapaWindow mapaWindow = new MapaWindow();
-            //mapaWindow.Show();
+            MenuMapa menuMapa = new MenuMapa();
+            menuMapa.Show();
             this.Close();
         }
     }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\alumMA\source\cosas\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\
 AplicacionAutobuses
 none
 false
 DEBUG;TRACE
-C:\Users\alumMA\source\cosas\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\App.xaml
-41785524273
-
-8-1935770197
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\App.xaml
+64836497
+2-1995131042
+10-1012693642
 13-1505183044
-MainWindow.xaml;MenuInfo.xaml;MenuFavoritos.xaml;MenuParadas.xaml;
+MainWindow.xaml;MenuIncidencias.xaml;MenuInfo.xaml;MenuFavoritos.xaml;MenuMapa.xaml;MenuParadas.xaml;
 
 False
 

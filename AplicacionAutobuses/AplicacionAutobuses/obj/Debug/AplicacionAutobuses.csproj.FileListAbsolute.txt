@@ -42,3 +42,10 @@ C:\Users\alumMA\source\cosas\TareasDelTicherDavid-\AplicacionAutobuses\Aplicacio
 C:\Users\alumMA\source\cosas\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\AplicacionAutobuses.csproj.CoreCompileInputs.cache
 C:\Users\alumMA\source\cosas\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\AplicacionAutobuses.exe
 C:\Users\alumMA\source\cosas\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\AplicacionAutobuses.pdb
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\bin\Debug\Database2.mdf
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\bin\Debug\Database2_log.ldf
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\AplicacionAutobuses_Content.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuIncidencias.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuIncidencias.baml
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuMapa.g.cs
+C:\Users\Aitor\Desktop\appAutobuses\TareasDelTicherDavid-\AplicacionAutobuses\AplicacionAutobuses\obj\Debug\MenuMapa.baml
